@@ -1,0 +1,91 @@
+---
+title: 'Assignment #1'
+naem: "Mia Rothberg"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    df_print: paged
+    code_download: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE)
+```
+
+```{r libraries}
+library(tidyverse)         # for graphing and data cleaning
+theme_set(theme_minimal()) # Lisa's favorite theme
+```
+
+```{r data}
+# Read in data here
+```
+
+When you finish the assignment, remove the `#` from the options chunk at the top, so that messages and warnings aren't printed. If you are getting errors in your code, add `error = TRUE` so that the file knits. I would recommend not removing the `#` until you are completely finished.
+
+## Setting up Git and GitHub in RStudio - STILL HAVE TO DO THIS PART
+
+Read the [Quick Intro](https://advanced-ds-in-r.netlify.app/posts/2021-01-28-gitgithub/#quick-intro) section of the Using git and GitHub in R Studio set of Course Materials. Set up Git and GitHub and create a GitHub repo and associated R Project (done for you when you clone the repo) for this homework assignment. Save this file to the project folder. You should always open the R Project (.Rproj) file when you work with any of the files in the project.
+
+**Tasks**:
+
+-   Edit the README file with a brief (1-2 sentences) description of what this repository is for.
+
+-   As you work on the assignment, commit and push changes to your repository.
+
+-   Below, post a link to your GitHub repository - the main page which should show the README is fine.
+
+## Creating a website
+
+You'll be using RStudio to create a personal website to showcase your work from this class! Start by watching the [Sharing on Short Notice](https://youtu.be/QcE4RBH2auQ) webinar by Alison Hill and Desirée De Leon of RStudio. This should help you choose the type of website you'd like to create.
+
+Once you've chosen that, you might want to look through some of the other *Building a website* resources I posted on the [resources page](https://advanced-ds-in-r.netlify.app/resources.html) of our course website. If anyone does not want to post a website publicly, please talk to me and we will find a different solution.
+
+**Tasks**:
+
+-   Make sure you create an R Project first and eventually a GitHub repository for your website. I suggest doing it at the beginning. If you have any issues, let me know - I know I ran into issues with my own distill site where I couldn't have a README file.
+
+-   Create a landing page that tells people a little bit about you. You could include what you are studying in school and your career/post-graduation aspirations, a photo, a link to your resume/CV, job/research experiences, and even something about other interests.
+
+-   Add another page where you will add posts. This could be a blog-format or a place you can link to other knitted html documents. You will be posting your Tidy Tuesday assignments on this page.
+
+-   Do some customization! This could be something small, like changing the default theme of an RMarkdown website. Or, it could be something bigger, like digging into the custom CSS of a distill or blogdown site. You should look at other people's website code for inspiration. A starting place might be the [distillery](https://distillery.rbind.io/showcase.html) blog that has links to source code for all those websites.
+
+-   Include a link to your website below.
+
+[Netlify link](https://mia-rothberg.netlify.app/)
+
+-   Listen to at least the first 20 minutes of "Building a Career in Data Science, Chapter 4: Building a Portfolio". Go to the main [podcast website](https://podcast.bestbook.cool/) and navigate to a podcast provider that works for you to find that specific episode. Write 2-3 sentences reflecting on what they discussed and why creating a website might be helpful for you.
+
+> The hosts discussed the utility of data science portfolios, especially for people first entering the job market. For me, the website will be helpful for keeping my best work in one place (especially  in the longterm) that can be shown to potential employers.
+
+## Project ideas
+
+Answer the following questions to start thinking about the project.
+
+-   What are some topics (or a single topic) you are interested in studying from a data science perspective? These can be very specific or more general.  
+
+> I would be most interested in looking at environmental and/or developmental data (which fit in with my major/interests)
+
+-   Given your to topic(s), where would you find data about it? Provide at least two sources, being as specific as possible. If you need to collect/scrape it yourself, describe the steps you'd need to take.
+
+> The World Bank generally has good datasets for this topic, as does FAOSTAT (the UN Food and Agriculture Organization)
+
+-   What challenges do you imagine having? How might you overcome them?  
+
+> Deciding on a specific topic has historically been difficult for me, but discussing with a group and tailoring the topic based on the data we can find will be helpful. The usual group project challenges (communication, balancing work amounts, etc), but those can be anticipated and prevented using a group work plan/contract.
+
+-   Respond to the Project Survey on moodle.
+
+## Bias and Fairness
+
+Listen to Dr. Rachel Thomas's [Bias and Fairness lecture](https://ethics.fast.ai/videos/?lesson=2). Write a brief paragraph reflecting on it. You might also be interested in reading the [ProPublica article](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing) Dr. Thomas references about using a tool called COMPAS to predict recidivism. Some questions/ideas you might keep in mind:
+
+-   Did you hear anything that surprised you?
+
+-   Why is it important that we pay attention to bias and fairness when studying data science?
+
+-   Is there a type of bias Dr. Thomas discussed that was new to you? Can you think about places you have seen these types of biases?
+
+> Although some of the specific examples and statistics Dr. Thomas provided in her lecture were surprising, the general themes were not. The beginning of the lecture, which focused mostly on medical datasets, reminded me a lot of Epidemiology, which I took last year. There are so many ways for clinical data to be misinterpreted that any small amount of bias (how likely someone is to go to the hospital, for example) could skew results. Similarly, the misuse of a (very flawed) AI facial recognition software by Baltimore police after the killing of Freddie Gray was a big news story because such technology is much more likely to misidentify people of color than white people and trans and non-binary people than cis people. The AI was trained on a dataset lacking the images necessary to make it skilled at identifying minorities, and regardless of that it is a huge invasion of privacy. These examples highlight the need to keep the quality of our data in mind when studying data science: how was it collected? who/what was left out of the data set? Whose voice was not included in the process? What failures of analysis might lead to false conclusions?
